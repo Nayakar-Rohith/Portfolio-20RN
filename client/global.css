@@ -94,7 +94,30 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .portfolio-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .backdrop-blur-subtle {
+    backdrop-filter: blur(8px);
   }
 }
