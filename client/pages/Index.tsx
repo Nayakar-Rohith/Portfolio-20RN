@@ -178,38 +178,38 @@ export default function Index() {
           </div>
           
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-indigo-600"></div>
-            
-            <div className="space-y-12">
+            {/* Timeline line - hidden on mobile */}
+            <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-indigo-600"></div>
+
+            <div className="space-y-8 md:space-y-12">
               {workExperience.map((exp, index) => (
-                <div key={index} className="relative flex items-start gap-8">
+                <div key={index} className="relative flex flex-col md:flex-row items-start gap-4 md:gap-8">
                   {/* Timeline dot */}
-                  <div className="relative z-10 flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
-                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                      <Cpu className="h-4 w-4 text-blue-600" />
+                  <div className="relative z-10 flex-shrink-0 w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto md:mx-0">
+                    <div className="w-6 h-6 md:w-8 md:h-8 bg-white rounded-full flex items-center justify-center">
+                      <Cpu className="h-3 w-3 md:h-4 md:w-4 text-blue-600" />
                     </div>
                   </div>
-                  
+
                   {/* Content */}
-                  <Card className="flex-1 border-0 shadow-lg">
+                  <Card className="flex-1 border-0 shadow-lg w-full">
                     <CardHeader>
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <CardTitle className="text-xl text-slate-900">{exp.company}</CardTitle>
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                        <div className="flex-1">
+                          <CardTitle className="text-lg md:text-xl text-slate-900">{exp.company}</CardTitle>
                           <CardDescription className="text-blue-600 font-medium">{exp.role}</CardDescription>
                         </div>
-                        <Badge variant="outline" className="text-slate-600">
+                        <Badge variant="outline" className="text-slate-600 self-start">
                           {exp.period}
                         </Badge>
                       </div>
                       <div className="flex items-center gap-2 text-slate-500">
                         <MapPin className="h-4 w-4" />
-                        <span>{exp.location}</span>
+                        <span className="text-sm">{exp.location}</span>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-slate-600">{exp.description}</p>
+                      <p className="text-slate-600 text-sm md:text-base">{exp.description}</p>
                     </CardContent>
                   </Card>
                 </div>
