@@ -42,11 +42,18 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="font-bold text-xl text-slate-900">Rohith Nayakar</div>
-            <div className="flex space-x-6">
+            <div className="hidden md:flex space-x-6">
               <a href="#about" className="text-slate-600 hover:text-slate-900 transition-colors">About</a>
               <a href="#skills" className="text-slate-600 hover:text-slate-900 transition-colors">Skills</a>
               <a href="#experience" className="text-slate-600 hover:text-slate-900 transition-colors">Experience</a>
               <a href="#contact" className="text-slate-600 hover:text-slate-900 transition-colors">Contact</a>
+            </div>
+            <div className="md:hidden">
+              <Button variant="ghost" size="icon">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </Button>
             </div>
           </div>
         </div>
