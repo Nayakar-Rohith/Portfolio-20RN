@@ -227,14 +227,16 @@ export default function Index() {
             Ready to bring your ideas to life with cutting-edge technology and innovative solutions.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto">
               <Mail className="mr-2 h-4 w-4" />
-              rohithnayakar1@gmail.com
+              <span className="hidden sm:inline">rohithnayakar1@gmail.com</span>
+              <span className="sm:hidden">Email Me</span>
             </Button>
-            <Button variant="outline" size="lg" className="border-slate-600 text-slate-300 hover:bg-slate-800">
+            <Button variant="outline" size="lg" className="border-slate-600 text-slate-300 hover:bg-slate-800 w-full sm:w-auto">
               <Phone className="mr-2 h-4 w-4" />
-              (205)-291-3138
+              <span className="hidden sm:inline">(205)-291-3138</span>
+              <span className="sm:hidden">Call Me</span>
             </Button>
           </div>
           
