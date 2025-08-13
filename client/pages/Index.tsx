@@ -86,14 +86,14 @@ export default function Index() {
                 Download Resume
               </Button>
             </div>
-            <div className="flex justify-center gap-6 text-slate-600">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 text-slate-600">
+              <div className="flex items-center justify-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>rohithnayakar1@gmail.com</span>
+                <span className="text-sm sm:text-base">rohithnayakar1@gmail.com</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>(205)-291-3138</span>
+                <span className="text-sm sm:text-base">(205)-291-3138</span>
               </div>
             </div>
           </div>
